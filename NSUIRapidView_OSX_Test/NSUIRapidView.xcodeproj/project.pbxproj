@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
+		DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA129EA18539CCC006D6455 /* InfoPlist.strings */; };
+		DCA129EE18539CCC006D6455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA129ED18539CCC006D6455 /* main.m */; };
+		DCA129F218539CCC006D6455 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DCA129F018539CCC006D6455 /* Credits.rtf */; };
+		DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA129F418539CCC006D6455 /* NSUIRapidViewAppDelegate.m */; };
+		DCA129F818539CCC006D6455 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA129F618539CCC006D6455 /* MainMenu.xib */; };
+		DCA129FA18539CCC006D6455 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA129F918539CCC006D6455 /* Images.xcassets */; };
+		DCA12A1918539DEE006D6455 /* NSView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */; };
+		DCA12A2018539E14006D6455 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A1F18539E14006D6455 /* Foundation.framework */; };
+		DCA12A2218539E14006D6455 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A2118539E14006D6455 /* CoreGraphics.framework */; };
+		DCA12A2418539E14006D6455 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A2318539E14006D6455 /* UIKit.framework */; };
+		DCA12A2A18539E14006D6455 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA12A2818539E14006D6455 /* InfoPlist.strings */; };
+		DCA12A2C18539E14006D6455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A2B18539E14006D6455 /* main.m */; };
+		DCA12A3018539E14006D6455 /* NSUIRapidViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A2F18539E14006D6455 /* NSUIRapidViewAppDelegate.m */; };
+		DCA12A3318539E14006D6455 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA12A3118539E14006D6455 /* Main_iPhone.storyboard */; };
+		DCA12A3618539E14006D6455 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA12A3418539E14006D6455 /* Main_iPad.storyboard */; };
+		DCA12A3918539E14006D6455 /* NSUIRapidViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A3818539E14006D6455 /* NSUIRapidViewViewController.m */; };
+		DCA12A3B18539E14006D6455 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA12A3A18539E14006D6455 /* Images.xcassets */; };
+		DCA12A5418539E30006D6455 /* UIView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUIRapidView_OSX_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA129E118539CCC006D6455 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DCA129E418539CCC006D6455 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DCA129E518539CCC006D6455 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DCA129E618539CCC006D6455 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCA129E918539CCC006D6455 /* NSUIRapidView_OSX_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUIRapidView_OSX_Test-Info.plist"; sourceTree = "<group>"; };
+		DCA129EB18539CCC006D6455 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCA129ED18539CCC006D6455 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCA129EF18539CCC006D6455 /* NSUIRapidView_OSX_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUIRapidView_OSX_Test-Prefix.pch"; sourceTree = "<group>"; };
+		DCA129F118539CCC006D6455 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DCA129F318539CCC006D6455 /* NSUIRapidViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUIRapidViewAppDelegate.h; sourceTree = "<group>"; };
+		DCA129F418539CCC006D6455 /* NSUIRapidViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUIRapidViewAppDelegate.m; sourceTree = "<group>"; };
+		DCA129F718539CCC006D6455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DCA129F918539CCC006D6455 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCA12A0018539CCC006D6455 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSView+DynamicDraw.h"; path = "../NSView+DynamicDraw.h"; sourceTree = "<group>"; };
+		DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSView+DynamicDraw.m"; path = "../NSView+DynamicDraw.m"; sourceTree = "<group>"; };
+		DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+DynamicDraw.h"; path = "../UIView+DynamicDraw.h"; sourceTree = "<group>"; };
+		DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+DynamicDraw.m"; path = "../UIView+DynamicDraw.m"; sourceTree = "<group>"; };
+		DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUIRapidView_IOS_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA12A1F18539E14006D6455 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DCA12A2118539E14006D6455 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DCA12A2318539E14006D6455 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DCA12A2718539E14006D6455 /* NSUIRapidView_IOS_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUIRapidView_IOS_Test-Info.plist"; sourceTree = "<group>"; };
+		DCA12A2918539E14006D6455 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCA12A2B18539E14006D6455 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCA12A2D18539E14006D6455 /* NSUIRapidView_IOS_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUIRapidView_IOS_Test-Prefix.pch"; sourceTree = "<group>"; };
+		DCA12A2E18539E14006D6455 /* NSUIRapidViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUIRapidViewAppDelegate.h; sourceTree = "<group>"; };
+		DCA12A2F18539E14006D6455 /* NSUIRapidViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUIRapidViewAppDelegate.m; sourceTree = "<group>"; };
+		DCA12A3218539E14006D6455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		DCA12A3518539E14006D6455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		DCA12A3718539E14006D6455 /* NSUIRapidViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUIRapidViewViewController.h; sourceTree = "<group>"; };
+		DCA12A3818539E14006D6455 /* NSUIRapidViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSUIRapidViewViewController.m; sourceTree = "<group>"; };
+		DCA12A3A18539E14006D6455 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCA129DB18539CCC006D6455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA12A1B18539E14006D6455 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA12A2218539E14006D6455 /* CoreGraphics.framework in Frameworks */,
+				DCA12A2418539E14006D6455 /* UIKit.framework in Frameworks */,
+				DCA12A2018539E14006D6455 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCA129D518539CCB006D6455 = {
+			isa = PBXGroup;
+			children = (
+				DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */,
+				DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */,
+				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
+				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
+				DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */,
+				DCA12A2518539E14006D6455 /* NSUIRapidView_IOS_Test */,
+				DCA129E018539CCC006D6455 /* Frameworks */,
+				DCA129DF18539CCC006D6455 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCA129DF18539CCC006D6455 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */,
+				DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCA129E018539CCC006D6455 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCA129E118539CCC006D6455 /* Cocoa.framework */,
+				DCA12A0018539CCC006D6455 /* XCTest.framework */,
+				DCA12A1F18539E14006D6455 /* Foundation.framework */,
+				DCA12A2118539E14006D6455 /* CoreGraphics.framework */,
+				DCA12A2318539E14006D6455 /* UIKit.framework */,
+				DCA129E318539CCC006D6455 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCA129E318539CCC006D6455 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCA129E418539CCC006D6455 /* AppKit.framework */,
+				DCA129E518539CCC006D6455 /* CoreData.framework */,
+				DCA129E618539CCC006D6455 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
+			isa = PBXGroup;
+			children = (
+				DCA129F318539CCC006D6455 /* NSUIRapidViewAppDelegate.h */,
+				DCA129F418539CCC006D6455 /* NSUIRapidViewAppDelegate.m */,
+				DCA129F618539CCC006D6455 /* MainMenu.xib */,
+				DCA129F918539CCC006D6455 /* Images.xcassets */,
+				DCA129E818539CCC006D6455 /* Supporting Files */,
+			);
+			path = NSUIRapidView_OSX_Test;
+			sourceTree = "<group>";
+		};
+		DCA129E818539CCC006D6455 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA129E918539CCC006D6455 /* NSUIRapidView_OSX_Test-Info.plist */,
+				DCA129EA18539CCC006D6455 /* InfoPlist.strings */,
+				DCA129ED18539CCC006D6455 /* main.m */,
+				DCA129EF18539CCC006D6455 /* NSUIRapidView_OSX_Test-Prefix.pch */,
+				DCA129F018539CCC006D6455 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCA12A2518539E14006D6455 /* NSUIRapidView_IOS_Test */ = {
+			isa = PBXGroup;
+			children = (
+				DCA12A2E18539E14006D6455 /* NSUIRapidViewAppDelegate.h */,
+				DCA12A2F18539E14006D6455 /* NSUIRapidViewAppDelegate.m */,
+				DCA12A3118539E14006D6455 /* Main_iPhone.storyboard */,
+				DCA12A3418539E14006D6455 /* Main_iPad.storyboard */,
+				DCA12A3718539E14006D6455 /* NSUIRapidViewViewController.h */,
+				DCA12A3818539E14006D6455 /* NSUIRapidViewViewController.m */,
+				DCA12A3A18539E14006D6455 /* Images.xcassets */,
+				DCA12A2618539E14006D6455 /* Supporting Files */,
+			);
+			path = NSUIRapidView_IOS_Test;
+			sourceTree = "<group>";
+		};
+		DCA12A2618539E14006D6455 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCA12A2718539E14006D6455 /* NSUIRapidView_IOS_Test-Info.plist */,
+				DCA12A2818539E14006D6455 /* InfoPlist.strings */,
+				DCA12A2B18539E14006D6455 /* main.m */,
+				DCA12A2D18539E14006D6455 /* NSUIRapidView_IOS_Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA12A0F18539CCC006D6455 /* Build configuration list for PBXNativeTarget "NSUIRapidView_OSX_Test" */;
+			buildPhases = (
+				DCA129DA18539CCC006D6455 /* Sources */,
+				DCA129DB18539CCC006D6455 /* Frameworks */,
+				DCA129DC18539CCC006D6455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSUIRapidView_OSX_Test;
+			productName = NSUIRapidView_OSX_Test;
+			productReference = DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCA12A1D18539E14006D6455 /* NSUIRapidView_IOS_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCA12A4E18539E15006D6455 /* Build configuration list for PBXNativeTarget "NSUIRapidView_IOS_Test" */;
+			buildPhases = (
+				DCA12A1A18539E14006D6455 /* Sources */,
+				DCA12A1B18539E14006D6455 /* Frameworks */,
+				DCA12A1C18539E14006D6455 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSUIRapidView_IOS_Test;
+			productName = NSUIRapidView_IOS_Test;
+			productReference = DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCA129D618539CCB006D6455 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NSUIRapidView;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Dragan Petrovic";
+			};
+			buildConfigurationList = DCA129D918539CCB006D6455 /* Build configuration list for PBXProject "NSUIRapidView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCA129D518539CCB006D6455;
+			productRefGroup = DCA129DF18539CCC006D6455 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */,
+				DCA12A1D18539E14006D6455 /* NSUIRapidView_IOS_Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCA129DC18539CCC006D6455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */,
+				DCA129FA18539CCC006D6455 /* Images.xcassets in Resources */,
+				DCA129F218539CCC006D6455 /* Credits.rtf in Resources */,
+				DCA129F818539CCC006D6455 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA12A1C18539E14006D6455 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA12A3618539E14006D6455 /* Main_iPad.storyboard in Resources */,
+				DCA12A3B18539E14006D6455 /* Images.xcassets in Resources */,
+				DCA12A3318539E14006D6455 /* Main_iPhone.storyboard in Resources */,
+				DCA12A2A18539E14006D6455 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCA129DA18539CCC006D6455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA12A1918539DEE006D6455 /* NSView+DynamicDraw.m in Sources */,
+				DCA129EE18539CCC006D6455 /* main.m in Sources */,
+				DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCA12A1A18539E14006D6455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCA12A2C18539E14006D6455 /* main.m in Sources */,
+				DCA12A3918539E14006D6455 /* NSUIRapidViewViewController.m in Sources */,
+				DCA12A5418539E30006D6455 /* UIView+DynamicDraw.m in Sources */,
+				DCA12A3018539E14006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DCA129EA18539CCC006D6455 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA129EB18539CCC006D6455 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DCA129F018539CCC006D6455 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA129F118539CCC006D6455 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DCA129F618539CCC006D6455 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA129F718539CCC006D6455 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DCA12A2818539E14006D6455 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA12A2918539E14006D6455 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DCA12A3118539E14006D6455 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA12A3218539E14006D6455 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DCA12A3418539E14006D6455 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCA12A3518539E14006D6455 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCA12A0D18539CCC006D6455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DCA12A0E18539CCC006D6455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DCA12A1018539CCC006D6455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIRapidView_OSX_Test/NSUIRapidView_OSX_Test-Prefix.pch";
+				INFOPLIST_FILE = "NSUIRapidView_OSX_Test/NSUIRapidView_OSX_Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCA12A1118539CCC006D6455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIRapidView_OSX_Test/NSUIRapidView_OSX_Test-Prefix.pch";
+				INFOPLIST_FILE = "NSUIRapidView_OSX_Test/NSUIRapidView_OSX_Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DCA12A4F18539E15006D6455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIRapidView_IOS_Test/NSUIRapidView_IOS_Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NSUIRapidView_IOS_Test/NSUIRapidView_IOS_Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DCA12A5018539E15006D6455 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIRapidView_IOS_Test/NSUIRapidView_IOS_Test-Prefix.pch";
+				INFOPLIST_FILE = "NSUIRapidView_IOS_Test/NSUIRapidView_IOS_Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCA129D918539CCB006D6455 /* Build configuration list for PBXProject "NSUIRapidView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA12A0D18539CCC006D6455 /* Debug */,
+				DCA12A0E18539CCC006D6455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCA12A0F18539CCC006D6455 /* Build configuration list for PBXNativeTarget "NSUIRapidView_OSX_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA12A1018539CCC006D6455 /* Debug */,
+				DCA12A1118539CCC006D6455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCA12A4E18539E15006D6455 /* Build configuration list for PBXNativeTarget "NSUIRapidView_IOS_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCA12A4F18539E15006D6455 /* Debug */,
+				DCA12A5018539E15006D6455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DCA129D618539CCB006D6455 /* Project object */;
+}
