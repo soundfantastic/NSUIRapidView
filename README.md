@@ -1,4 +1,4 @@
 NSUIRapidView
 =============
 
-Objective-C NSView/UIView category with runtime drawing methods
+Objective-C NSView/UIView categories with runtime drawing methods
