@@ -29,7 +29,8 @@ NS_INLINE Class view_newClass() {
 #pragma mark - Public
 + withBlock:(void(^)(NSView* sender, CGContextRef context))drawingBlock frame:(NSRect)frame superDraw:(BOOL)superDraw {
     Class Subview = view_newClass();
-    class_addMethod(Subview, @selector(drawRect:), imp_implementationWithBlock(^(id sender, NSRect dirtyRect) {
+    SEL drawRect = @selector(drawRect:);
+    class_addMethod(Subview, drawRect, imp_implementationWithBlock(^(id sender, NSRect dirtyRect) {
         if(superDraw) {
             super_drawRect(Subview, dirtyRect);
         }
@@ -37,14 +38,15 @@ NS_INLINE Class view_newClass() {
             CGContextRef graphicContext = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
             drawingBlock(sender, graphicContext);
         }
-    }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), @selector(drawRect:))));
+    }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), drawRect)));
     
     return [[Subview alloc] initWithFrame:frame];
 }
 
 + withMethod:(SEL)selector target:(id)target frame:(NSRect)frame superDraw:(BOOL)superDraw {
     Class Subview = view_newClass();
-    class_addMethod(Subview, @selector(drawRect:), imp_implementationWithBlock(^(id sender, NSRect dirtyRect) {
+    SEL drawRect = @selector(drawRect:);
+    class_addMethod(Subview, drawRect, imp_implementationWithBlock(^(id sender, NSRect dirtyRect) {
         if(superDraw) {
             super_drawRect(Subview, dirtyRect);
         }
@@ -52,7 +54,7 @@ NS_INLINE Class view_newClass() {
             CGContextRef graphicContext = (CGContextRef)[[NSGraphicsContext currentContext] graphicsPort];
             objc_msgSend(target, selector, sender, graphicContext);
         }
-    }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), @selector(drawRect:))));
+    }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), drawRect)));
     
     return [[Subview alloc] initWithFrame:frame];
 }

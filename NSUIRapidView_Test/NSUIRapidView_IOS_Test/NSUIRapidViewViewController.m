@@ -8,13 +8,29 @@
 
 #import "NSUIRapidViewViewController.h"
 #import "UIView+DynamicDraw.h"
+#import "UIView+TouchesEvents.h"
 #import "CommonDrawCode.h"
 
-@interface NSUIRapidViewViewController ()
+@interface NSUIRapidViewViewController () {
+
+}
+
 
 @end
 
 @implementation NSUIRapidViewViewController
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+}
 
 - (void)viewDidLoad
 {
@@ -35,6 +51,24 @@
                               superDraw:YES];
     view_2.opaque = NO;
     [mainView addSubview:view_2];
+    void(^test)(int m) = ^(int m) {
+        if(m == 0) {
+            [view_2 touchesBeganWithMethod:@selector(touchesBegan:withEvent:) target:self];
+            [view_2 touchesMovedWithMethod:@selector(touchesMoved:withEvent:) target:self];
+            [view_2 touchesEndedWithMethod:@selector(touchesEnded:withEvent:) target:self];
+            [view_2 touchesCancelledWithMethod:@selector(touchesCancelled:withEvent:) target:self];
+        } else {
+            [view_2 touchesBeganWithBlock:^(NSSet *touches, UIEvent *event) {
+            }];
+            [view_2 touchesMovedWithBlock:^(NSSet *touches, UIEvent *event) {
+            }];
+            [view_2 touchesEndedWithBlock:^(NSSet *touches, UIEvent *event) {
+            }];
+            [view_2 touchesCancelledWithBlock:^(NSSet *touches, UIEvent *event) {
+            }];
+        }
+    };
+    test(1);
 }
 
 - (void)didReceiveMemoryWarning

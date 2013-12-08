@@ -30,6 +30,7 @@
 		DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A561853A68E006D6455 /* CommonDrawCode.m */; };
 		DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
 		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
+		DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		DCA12A591854881A006D6455 /* NSView+MouseEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+MouseEvents.h"; path = "../NSView+MouseEvents.h"; sourceTree = "<group>"; };
 		DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+MouseEvents.m"; path = "../NSView+MouseEvents.m"; sourceTree = "<group>"; };
 		DCA12A5C18548E52006D6455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TouchesEvents.h"; path = "../UIView+TouchesEvents.h"; sourceTree = "<group>"; };
+		DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TouchesEvents.m"; path = "../UIView+TouchesEvents.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */,
 				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
 				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
+				DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */,
+				DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */,
 				DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */,
 				DCA12A2518539E14006D6455 /* NSUIRapidView_IOS_Test */,
 				DCA129E018539CCC006D6455 /* Frameworks */,
@@ -309,6 +314,7 @@
 				DCA12A2C18539E14006D6455 /* main.m in Sources */,
 				DCA12A3918539E14006D6455 /* NSUIRapidViewViewController.m in Sources */,
 				DCA12A5418539E30006D6455 /* UIView+DynamicDraw.m in Sources */,
+				DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */,
 				DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */,
 				DCA12A3018539E14006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
 			);
@@ -469,6 +475,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +503,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
