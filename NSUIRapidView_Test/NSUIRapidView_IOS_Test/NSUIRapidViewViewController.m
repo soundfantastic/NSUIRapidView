@@ -43,7 +43,7 @@
                                  frame:mainView.frame
                              superDraw:YES];
     view_1.opaque = NO;
-//    [mainView addSubview:view_1];
+    [mainView addSubview:view_1];
     
     UIView* view_2 = [UIView withMethod:@selector(drawingMethod:context:)
                                  target:[CommonCode class]
