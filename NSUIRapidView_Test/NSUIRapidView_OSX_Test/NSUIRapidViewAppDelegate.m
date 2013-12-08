@@ -42,13 +42,24 @@
     view_2.wantsLayer = YES;
     [mainView addSubview:view_2];
     
-    [view_2 mouseDownWithMethod:@selector(mouseDown:event:) target:self];
-    [view_2 mouseUpWithMethod:@selector(mouseUp:event:) target:self];
-    [view_2 mouseDraggedWithMethod:@selector(mouseDragged:event:) target:self];
-    [view_2 mouseDownWithBlock:^(NSView* view, NSEvent *event) {}];
-    [view_2 mouseUpWithBlock:^(NSView* view, NSEvent *event) {}];
-    [view_2 mouseDraggedWithBlock:^(NSView* view, NSEvent *event) {}];
-
+    void(^test)(int m) = ^(int m) {
+        if(m == 0) {
+            [view_2 mouseDownWithMethod:@selector(mouseDown:event:) target:self];
+            [view_2 mouseUpWithMethod:@selector(mouseUp:event:) target:self];
+            [view_2 mouseDraggedWithMethod:@selector(mouseDragged:event:) target:self];
+        } else {
+            [view_2 mouseDownWithBlock:^(NSView* view, NSEvent *event) {
+                NSLog(@"%@ %@", view, event);
+            }];
+            [view_2 mouseUpWithBlock:^(NSView* view, NSEvent *event) {
+                NSLog(@"%@ %@", view, event);
+            }];
+            [view_2 mouseDraggedWithBlock:^(NSView* view, NSEvent *event) {
+                view.layer.transform = CATransform3DMakeRotation(1, event.deltaX, event.deltaY, event.deltaZ);
+            }];
+        }
+    };
+    test(1);
 }
 
 @end
