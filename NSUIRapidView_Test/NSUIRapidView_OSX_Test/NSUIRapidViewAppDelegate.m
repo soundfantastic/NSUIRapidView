@@ -60,6 +60,8 @@
         }
     };
     test(1);
+    //remove & dispose class if needed
+    //[view_1 dispose];
 }
 
 @end

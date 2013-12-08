@@ -40,7 +40,7 @@ NS_INLINE Class view_newClass() {
             drawingBlock(sender, graphicContext);
         }
     }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), drawRect)));
-    
+    objc_registerClassPair(Subview);
     return [[Subview alloc] initWithFrame:frame];
 }
 
@@ -56,8 +56,13 @@ NS_INLINE Class view_newClass() {
             objc_msgSend(target, selector, sender, graphicContext);
         }
     }), method_getTypeEncoding(class_getInstanceMethod(class_getSuperclass(Subview), drawRect)));
-    
+    objc_registerClassPair(Subview);
     return [[Subview alloc] initWithFrame:frame];
+}
+
+- (void) dispose {
+    [self removeFromSuperview];
+    objc_disposeClassPair([self class]);
 }
 
 @end
