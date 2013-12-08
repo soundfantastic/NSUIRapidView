@@ -28,6 +28,8 @@
 		DCA12A5418539E30006D6455 /* UIView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */; };
 		DCA12A571853A68E006D6455 /* CommonDrawCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A561853A68E006D6455 /* CommonDrawCode.m */; };
 		DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A561853A68E006D6455 /* CommonDrawCode.m */; };
+		DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
+		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,9 @@
 		DCA12A3A18539E14006D6455 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DCA12A551853A68E006D6455 /* CommonDrawCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDrawCode.h; path = "Common test/CommonDrawCode.h"; sourceTree = "<group>"; };
 		DCA12A561853A68E006D6455 /* CommonDrawCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonDrawCode.m; path = "Common test/CommonDrawCode.m"; sourceTree = "<group>"; };
+		DCA12A591854881A006D6455 /* NSView+MouseEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+MouseEvents.h"; path = "../NSView+MouseEvents.h"; sourceTree = "<group>"; };
+		DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+MouseEvents.m"; path = "../NSView+MouseEvents.m"; sourceTree = "<group>"; };
+		DCA12A5C18548E52006D6455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */,
 				DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +104,8 @@
 				DCA12A561853A68E006D6455 /* CommonDrawCode.m */,
 				DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */,
 				DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */,
+				DCA12A591854881A006D6455 /* NSView+MouseEvents.h */,
+				DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */,
 				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
 				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
 				DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */,
@@ -119,6 +127,7 @@
 		DCA129E018539CCC006D6455 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCA12A5C18548E52006D6455 /* QuartzCore.framework */,
 				DCA129E118539CCC006D6455 /* Cocoa.framework */,
 				DCA12A0018539CCC006D6455 /* XCTest.framework */,
 				DCA12A1F18539E14006D6455 /* Foundation.framework */,
@@ -289,6 +298,7 @@
 				DCA12A1918539DEE006D6455 /* NSView+DynamicDraw.m in Sources */,
 				DCA129EE18539CCC006D6455 /* main.m in Sources */,
 				DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
+				DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

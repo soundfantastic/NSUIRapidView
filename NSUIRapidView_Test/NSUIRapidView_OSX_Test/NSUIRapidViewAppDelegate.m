@@ -8,9 +8,20 @@
 
 #import "NSUIRapidViewAppDelegate.h"
 #import "NSView+DynamicDraw.h"
+#import "NSView+MouseEvents.h"
 #import "CommonDrawCode.h"
 
 @implementation NSUIRapidViewAppDelegate
+
+- (void) mouseDown:(NSView*)view event:(NSEvent*)event {
+    NSLog(@"%@ %@", view, event);
+}
+- (void) mouseUp:(NSView*)view event:(NSEvent*)event {
+     NSLog(@"%@ %@", view, event);
+}
+- (void) mouseDragged:(NSView*)view event:(NSEvent*)event {
+     view.layer.transform = CATransform3DMakeRotation(1, event.deltaX, event.deltaY, event.deltaZ);
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
@@ -28,7 +39,16 @@
                                   frame:mainView.frame
                               superDraw:YES];
     view_2.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
+    view_2.wantsLayer = YES;
     [mainView addSubview:view_2];
+    
+    [view_2 mouseDownWithMethod:@selector(mouseDown:event:) target:self];
+    [view_2 mouseUpWithMethod:@selector(mouseUp:event:) target:self];
+    [view_2 mouseDraggedWithMethod:@selector(mouseDragged:event:) target:self];
+    [view_2 mouseDownWithBlock:^(NSView* view, NSEvent *event) {}];
+    [view_2 mouseUpWithBlock:^(NSView* view, NSEvent *event) {}];
+    [view_2 mouseDraggedWithBlock:^(NSView* view, NSEvent *event) {}];
+
 }
 
 @end

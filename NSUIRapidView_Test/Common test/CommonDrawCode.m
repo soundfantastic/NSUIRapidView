@@ -37,6 +37,7 @@
         frame = ((UIView*)sender).frame;
 #else
         frame = ((NSView*)sender).frame;
+        
 #endif
         CGFloat radius = 0.8 * CGRectGetWidth(frame) * 0.5;
         CGFloat theta = 2 * M_PI * (2.0 / 5.0);
