@@ -11,11 +11,7 @@
 #import "UIView+TouchesEvents.h"
 #import "CommonDrawCode.h"
 
-@interface NSUIRapidViewViewController () {
-
-}
-
-
+@interface NSUIRapidViewViewController () {}
 @end
 
 @implementation NSUIRapidViewViewController
