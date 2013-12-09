@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^Draw_block)(id view, CGContextRef context);
-
 @interface CommonCode : NSObject
-
 + (void) drawingMethod:(id)view context:(CGContextRef)context;
-+ (Draw_block) drawingBlock;
-
++ (void(^)(id sender, CGContextRef context))drawingBlock;
 @end
