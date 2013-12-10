@@ -31,6 +31,8 @@
 		DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
 		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
 		DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */; };
+		DCEA20741857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
+		DCEA20751857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		DCA12A5C18548E52006D6455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TouchesEvents.h"; path = "../UIView+TouchesEvents.h"; sourceTree = "<group>"; };
 		DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TouchesEvents.m"; path = "../UIView+TouchesEvents.m"; sourceTree = "<group>"; };
+		DCEA20721857A5B30002ADB4 /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = "Common test/Life.h"; sourceTree = "<group>"; };
+		DCEA20731857A5B30002ADB4 /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = "Common test/Life.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		DCA129D518539CCB006D6455 = {
 			isa = PBXGroup;
 			children = (
+				DCEA20721857A5B30002ADB4 /* Life.h */,
+				DCEA20731857A5B30002ADB4 /* Life.m */,
 				DCA12A551853A68E006D6455 /* CommonDrawCode.h */,
 				DCA12A561853A68E006D6455 /* CommonDrawCode.m */,
 				DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */,
@@ -304,6 +310,7 @@
 				DCA129EE18539CCC006D6455 /* main.m in Sources */,
 				DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
 				DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */,
+				DCEA20741857A5B30002ADB4 /* Life.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +322,7 @@
 				DCA12A3918539E14006D6455 /* NSUIRapidViewViewController.m in Sources */,
 				DCA12A5418539E30006D6455 /* UIView+DynamicDraw.m in Sources */,
 				DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */,
+				DCEA20751857A5B30002ADB4 /* Life.m in Sources */,
 				DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */,
 				DCA12A3018539E14006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
 			);

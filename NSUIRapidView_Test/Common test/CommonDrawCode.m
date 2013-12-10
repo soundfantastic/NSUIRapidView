@@ -18,7 +18,7 @@ NS_INLINE void forme(id sender, CGContextRef context, CGFloat* color, CGFloat d)
     frame = ((NSView*)sender).frame;
 #endif
     CGFloat radius = d * CGRectGetWidth(frame) * 0.5;
-    CGFloat t = 15;
+    CGFloat t = 5;
     CGFloat theta = 2 * M_PI * (2.0 / t);
     CGContextTranslateCTM (context, CGRectGetWidth(frame)/2, CGRectGetHeight(frame)/2);
     CGContextSetRGBStrokeColor(context, color[0], color[1], color[2], color[3]);
@@ -49,7 +49,7 @@ void text(id sender, CGContextRef context, NSString* string, CGPoint p, CGFloat*
     forme(sender, context, color, 0.5);
     CGContextRestoreGState(context);
     CGFloat color2[] = {0.8, 0.2, 0.2, 1};
-    text(sender, context, @"Ne", CGPointMake(430, 50), color2);
+    text(sender, context, @"Ne", CGPointMake(10, 50), color2);
 }
 
 + (void(^)(id sender, CGContextRef context))drawingBlock {
