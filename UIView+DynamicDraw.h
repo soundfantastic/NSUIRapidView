@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Dragan Petrovic. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @interface UIView (injectDraw)
 
 + withBlock:(void(^)(UIView* sender, CGContextRef context))drawingBlock
