@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC5AF7661866ED2B00E106B6 /* NSUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5AF7651866ED2B00E106B6 /* NSUIView.m */; };
 		DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
 		DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA129EA18539CCC006D6455 /* InfoPlist.strings */; };
 		DCA129EE18539CCC006D6455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA129ED18539CCC006D6455 /* main.m */; };
@@ -31,11 +32,20 @@
 		DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
 		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
 		DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */; };
+		DCCE34CC18660140001BDAEA /* NSView+DynamicDraw.h in Headers */ = {isa = PBXBuildFile; fileRef = DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		DCCE34CD18660140001BDAEA /* NSView+MouseEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = DCA12A591854881A006D6455 /* NSView+MouseEvents.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DCEA20741857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
 		DCEA20751857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
+		DCF1E7EF1865F5850081FF47 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
+		DCF1E7F51865F5850081FF47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCF1E7F31865F5850081FF47 /* InfoPlist.strings */; };
+		DCF1E8121865F5BF0081FF47 /* NSView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */; };
+		DCF1E8131865F5BF0081FF47 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
+		DCF1E8141865F5DB0081FF47 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
+		DCF1E8151865F69D0081FF47 /* NSUIView.h in Headers */ = {isa = PBXBuildFile; fileRef = DCF1E7F71865F5850081FF47 /* NSUIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC5AF7651866ED2B00E106B6 /* NSUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUIView.m; sourceTree = "<group>"; };
 		DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUIRapidView_OSX_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA129E118539CCC006D6455 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DCA129E418539CCC006D6455 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -79,6 +89,11 @@
 		DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TouchesEvents.m"; path = "../UIView+TouchesEvents.m"; sourceTree = "<group>"; };
 		DCEA20721857A5B30002ADB4 /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = "Common test/Life.h"; sourceTree = "<group>"; };
 		DCEA20731857A5B30002ADB4 /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = "Common test/Life.m"; sourceTree = "<group>"; };
+		DCF1E7EE1865F5850081FF47 /* NSUIView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSUIView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCF1E7F21865F5850081FF47 /* NSUIView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSUIView-Info.plist"; sourceTree = "<group>"; };
+		DCF1E7F41865F5850081FF47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DCF1E7F61865F5850081FF47 /* NSUIView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUIView-Prefix.pch"; sourceTree = "<group>"; };
+		DCF1E7F71865F5850081FF47 /* NSUIView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSUIView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,26 +116,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DCF1E7EA1865F5850081FF47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF1E8141865F5DB0081FF47 /* QuartzCore.framework in Frameworks */,
+				DCF1E7EF1865F5850081FF47 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DCA129D518539CCB006D6455 = {
 			isa = PBXGroup;
 			children = (
-				DCEA20721857A5B30002ADB4 /* Life.h */,
-				DCEA20731857A5B30002ADB4 /* Life.m */,
-				DCA12A551853A68E006D6455 /* CommonDrawCode.h */,
-				DCA12A561853A68E006D6455 /* CommonDrawCode.m */,
-				DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */,
-				DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */,
-				DCA12A591854881A006D6455 /* NSView+MouseEvents.h */,
-				DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */,
-				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
-				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
-				DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */,
-				DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */,
+				DCEBEA7918688278001603EF /* NSUIView */,
+				DCEBEA781868825D001603EF /* Common tests  */,
 				DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */,
 				DCA12A2518539E14006D6455 /* NSUIRapidView_IOS_Test */,
+				DCF1E7F01865F5850081FF47 /* NSUIView framework */,
 				DCA129E018539CCC006D6455 /* Frameworks */,
 				DCA129DF18539CCC006D6455 /* Products */,
 			);
@@ -131,6 +146,7 @@
 			children = (
 				DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */,
 				DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */,
+				DCF1E7EE1865F5850081FF47 /* NSUIView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,7 +225,83 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DCEBEA781868825D001603EF /* Common tests  */ = {
+			isa = PBXGroup;
+			children = (
+				DCEA20721857A5B30002ADB4 /* Life.h */,
+				DCEA20731857A5B30002ADB4 /* Life.m */,
+				DCA12A551853A68E006D6455 /* CommonDrawCode.h */,
+				DCA12A561853A68E006D6455 /* CommonDrawCode.m */,
+			);
+			name = "Common tests ";
+			sourceTree = "<group>";
+		};
+		DCEBEA7918688278001603EF /* NSUIView */ = {
+			isa = PBXGroup;
+			children = (
+				DCEBEA7B18688290001603EF /* UIView */,
+				DCEBEA7A18688286001603EF /* NSView */,
+			);
+			name = NSUIView;
+			sourceTree = "<group>";
+		};
+		DCEBEA7A18688286001603EF /* NSView */ = {
+			isa = PBXGroup;
+			children = (
+				DCA12A1518539DD8006D6455 /* NSView+DynamicDraw.h */,
+				DCA12A1618539DD8006D6455 /* NSView+DynamicDraw.m */,
+				DCA12A591854881A006D6455 /* NSView+MouseEvents.h */,
+				DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */,
+			);
+			name = NSView;
+			sourceTree = "<group>";
+		};
+		DCEBEA7B18688290001603EF /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
+				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
+				DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */,
+				DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
+		DCF1E7F01865F5850081FF47 /* NSUIView framework */ = {
+			isa = PBXGroup;
+			children = (
+				DCF1E7F71865F5850081FF47 /* NSUIView.h */,
+				DC5AF7651866ED2B00E106B6 /* NSUIView.m */,
+				DCF1E7F11865F5850081FF47 /* Supporting Files */,
+			);
+			name = "NSUIView framework";
+			path = NSUIView;
+			sourceTree = "<group>";
+		};
+		DCF1E7F11865F5850081FF47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCF1E7F21865F5850081FF47 /* NSUIView-Info.plist */,
+				DCF1E7F31865F5850081FF47 /* InfoPlist.strings */,
+				DCF1E7F61865F5850081FF47 /* NSUIView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DCF1E7EB1865F5850081FF47 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF1E8151865F69D0081FF47 /* NSUIView.h in Headers */,
+				DCCE34CC18660140001BDAEA /* NSView+DynamicDraw.h in Headers */,
+				DCCE34CD18660140001BDAEA /* NSView+MouseEvents.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
@@ -246,6 +338,24 @@
 			productReference = DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DCF1E7ED1865F5850081FF47 /* NSUIView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF1E8101865F5860081FF47 /* Build configuration list for PBXNativeTarget "NSUIView" */;
+			buildPhases = (
+				DCF1E7E91865F5850081FF47 /* Sources */,
+				DCF1E7EA1865F5850081FF47 /* Frameworks */,
+				DCF1E7EB1865F5850081FF47 /* Headers */,
+				DCF1E7EC1865F5850081FF47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSUIView;
+			productName = NSUIView;
+			productReference = DCF1E7EE1865F5850081FF47 /* NSUIView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,6 +381,7 @@
 			targets = (
 				DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */,
 				DCA12A1D18539E14006D6455 /* NSUIRapidView_IOS_Test */,
+				DCF1E7ED1865F5850081FF47 /* NSUIView */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +406,14 @@
 				DCA12A3B18539E14006D6455 /* Images.xcassets in Resources */,
 				DCA12A3318539E14006D6455 /* Main_iPhone.storyboard in Resources */,
 				DCA12A2A18539E14006D6455 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF1E7EC1865F5850081FF47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF1E7F51865F5850081FF47 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +444,16 @@
 				DCEA20751857A5B30002ADB4 /* Life.m in Sources */,
 				DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */,
 				DCA12A3018539E14006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCF1E7E91865F5850081FF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF1E8121865F5BF0081FF47 /* NSView+DynamicDraw.m in Sources */,
+				DCF1E8131865F5BF0081FF47 /* NSView+MouseEvents.m in Sources */,
+				DC5AF7661866ED2B00E106B6 /* NSUIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +506,14 @@
 				DCA12A3518539E14006D6455 /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DCF1E7F31865F5850081FF47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCF1E7F41865F5850081FF47 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -529,6 +666,44 @@
 			};
 			name = Release;
 		};
+		DCF1E80C1865F5860081FF47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIView/NSUIView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NSUIView/NSUIView-Info.plist";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		DCF1E80D1865F5860081FF47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSUIView/NSUIView-Prefix.pch";
+				INFOPLIST_FILE = "NSUIView/NSUIView-Info.plist";
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +730,15 @@
 			buildConfigurations = (
 				DCA12A4F18539E15006D6455 /* Debug */,
 				DCA12A5018539E15006D6455 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF1E8101865F5860081FF47 /* Build configuration list for PBXNativeTarget "NSUIView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCF1E80C1865F5860081FF47 /* Debug */,
+				DCF1E80D1865F5860081FF47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

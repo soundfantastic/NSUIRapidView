@@ -23,8 +23,8 @@ typedef Line    Matrix[COLS];
     
     if(self=[super init]) {
         srand ((unsigned)time(NULL));
-        for(int row = 0; row < ROWS; row++) {
-            for(int col = 0; col < COLS; col++) {
+        for(int row = 0; row < ROWS; ++row) {
+            for(int col = 0; col < COLS; ++col) {
                 _life[row][col] = (int)rand()%2;
             }
         }
@@ -96,7 +96,6 @@ typedef Line    Matrix[COLS];
 #endif
     CGContextSetRGBFillColor(context, .0, .0, .0, 1.0);
     CGContextFillRect(context, eRect);
-    
     CGFloat width = CGRectGetWidth(eRect)/(CGFloat)ROWS;
     CGFloat height = CGRectGetHeight(eRect)/(CGFloat)COLS;
     for(int sy = 0; sy < ROWS; sy++) {
@@ -104,17 +103,17 @@ typedef Line    Matrix[COLS];
             CGFloat xPos = sx*width;
             CGFloat yPos = sy*height;
             CGRect lifeRect = CGRectMake(xPos, yPos, width, height);
-            CGColorRef color = NULL;
+            CGColorRef s_color = NULL;
             BOOL l = _life[sx][sy];
             if(l) {
 #if TARGET_OS_IPHONE
-                color = [UIColor redColor].CGColor;
+                s_color = [UIColor redColor].CGColor;
 #else
-                color = [NSColor redColor].CGColor;
+                s_color = [NSColor redColor].CGColor;
 #endif
-                CGContextSetFillColorWithColor(context, color);
+                CGContextSetFillColorWithColor(context, s_color);
                 CGContextFillRect(context, lifeRect);
-            } 
+            }
         }
     }
    

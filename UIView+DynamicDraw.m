@@ -28,7 +28,10 @@ NS_INLINE Class view_newClass() {
 }
 
 #pragma mark - Public
-+ withBlock:(void(^)(UIView* sender, CGContextRef context))drawingBlock frame:(CGRect)frame superDraw:(BOOL)superDraw {
++ withBlock:(void(^)(UIView* sender, CGContextRef context))drawingBlock
+      frame:(CGRect)frame
+  superDraw:(BOOL)superDraw {
+    
     Class Subview = view_newClass();
     SEL drawRect = @selector(drawRect:);
     class_addMethod(Subview, drawRect, imp_implementationWithBlock(^(id sender, CGRect dirtyRect) {
@@ -44,7 +47,11 @@ NS_INLINE Class view_newClass() {
     return [[Subview alloc] initWithFrame:frame];
 }
 
-+ withMethod:(SEL)selector target:(id)target frame:(CGRect)frame superDraw:(BOOL)superDraw {
++ withMethod:(SEL)selector
+      target:(id)target
+       frame:(CGRect)frame
+   superDraw:(BOOL)superDraw {
+    
     Class Subview = view_newClass();
     SEL drawRect = @selector(drawRect:);
     class_addMethod(Subview, drawRect, imp_implementationWithBlock(^(id sender, CGRect dirtyRect) {
@@ -61,8 +68,9 @@ NS_INLINE Class view_newClass() {
 }
 
 - (void) dispose {
-    [self removeFromSuperview];
-    objc_disposeClassPair([self class]);
+    if([self class]) {
+        objc_disposeClassPair([self class]);
+    }
 }
 
 @end
