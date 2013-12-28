@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <OpenGL/OpenGL.h>
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
+#import <OpenGL/gl.h>
+#import <OpenGL/glu.h>
 
 @interface NSOpenGLView (dynamicDraw)
 
@@ -22,7 +22,9 @@
        frame:(NSRect)frame
    superDraw:(BOOL)superDraw;
 
-- (void) NSUIViewGLSet:(void(^)(void))block;
+- (void) glSetWithBlock:(void(^)(void))block;
+- (void) glSetWithMethod:(SEL)method
+                  target:(id)target;
 - (void) dispose;
 
 @end

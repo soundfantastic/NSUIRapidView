@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DC43FB551868BA0200F332BA /* NSOpenGLView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DC43FB541868BA0200F332BA /* NSOpenGLView+MouseEvents.m */; };
+		DC848FBA186E614B00E514DC /* fragment2.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCC0093D186E42CE00D7E486 /* fragment2.fsh */; };
+		DC848FBB186E614B00E514DC /* fragment3.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46B186E41CC009A0715 /* fragment3.fsh */; };
 		DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
 		DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA129EA18539CCC006D6455 /* InfoPlist.strings */; };
 		DCA129EE18539CCC006D6455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA129ED18539CCC006D6455 /* main.m */; };
@@ -32,6 +34,15 @@
 		DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5A1854881A006D6455 /* NSView+MouseEvents.m */; };
 		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
 		DCA12A601854965E006D6455 /* UIView+TouchesEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */; };
+		DCC0093E186E42CE00D7E486 /* fragment2.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCC0093D186E42CE00D7E486 /* fragment2.fsh */; };
+		DCC0093F186E42E500D7E486 /* fragment1.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46D186E41CC009A0715 /* fragment1.fsh */; };
+		DCC00940186E42ED00D7E486 /* vertex.vsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46C186E41CC009A0715 /* vertex.vsh */; };
+		DCDE1C09186C9F4D00D36E68 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDE1C07186C9F4D00D36E68 /* GLKit.framework */; };
+		DCDE1C0A186C9F4D00D36E68 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDE1C08186C9F4D00D36E68 /* OpenGLES.framework */; };
+		DCE2F46E186E41CC009A0715 /* fragment3.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46B186E41CC009A0715 /* fragment3.fsh */; };
+		DCE2F46F186E41CC009A0715 /* vertex.vsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46C186E41CC009A0715 /* vertex.vsh */; };
+		DCE2F470186E41CC009A0715 /* fragment1.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46D186E41CC009A0715 /* fragment1.fsh */; };
+		DCE501DA1869531500A3BABB /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE501D91869531500A3BABB /* GLUT.framework */; };
 		DCEA20741857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
 		DCEA20751857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
 		DCEBEB3E186897B6001603EF /* NSOpenGLView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEBEB3D186897B6001603EF /* NSOpenGLView+DynamicDraw.m */; };
@@ -39,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC14A2BD186C3A230086F06C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		DC14A2BF186C3A230086F06C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		DC43FB531868BA0200F332BA /* NSOpenGLView+MouseEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSOpenGLView+MouseEvents.h"; path = "../NSOpenGLView+MouseEvents.h"; sourceTree = "<group>"; };
 		DC43FB541868BA0200F332BA /* NSOpenGLView+MouseEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSOpenGLView+MouseEvents.m"; path = "../NSOpenGLView+MouseEvents.m"; sourceTree = "<group>"; };
 		DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUIRapidView_OSX_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +95,13 @@
 		DCA12A5C18548E52006D6455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+TouchesEvents.h"; path = "../UIView+TouchesEvents.h"; sourceTree = "<group>"; };
 		DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+TouchesEvents.m"; path = "../UIView+TouchesEvents.m"; sourceTree = "<group>"; };
+		DCC0093D186E42CE00D7E486 /* fragment2.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment2.fsh; sourceTree = "<group>"; };
+		DCDE1C07186C9F4D00D36E68 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
+		DCDE1C08186C9F4D00D36E68 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		DCE2F46B186E41CC009A0715 /* fragment3.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment3.fsh; sourceTree = "<group>"; };
+		DCE2F46C186E41CC009A0715 /* vertex.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertex.vsh; sourceTree = "<group>"; };
+		DCE2F46D186E41CC009A0715 /* fragment1.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment1.fsh; sourceTree = "<group>"; };
+		DCE501D91869531500A3BABB /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		DCEA20721857A5B30002ADB4 /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = "Common test/Life.h"; sourceTree = "<group>"; };
 		DCEA20731857A5B30002ADB4 /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = "Common test/Life.m"; sourceTree = "<group>"; };
 		DCEBEAA518688499001603EF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -95,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE501DA1869531500A3BABB /* GLUT.framework in Frameworks */,
 				DCEBEB4018689B5F001603EF /* OpenGL.framework in Frameworks */,
 				DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */,
 				DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */,
@@ -105,6 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDE1C09186C9F4D00D36E68 /* GLKit.framework in Frameworks */,
+				DCDE1C0A186C9F4D00D36E68 /* OpenGLES.framework in Frameworks */,
 				DCA12A2218539E14006D6455 /* CoreGraphics.framework in Frameworks */,
 				DCA12A2418539E14006D6455 /* UIKit.framework in Frameworks */,
 				DCA12A2018539E14006D6455 /* Foundation.framework in Frameworks */,
@@ -160,6 +183,9 @@
 		DCA129E018539CCC006D6455 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCDE1C07186C9F4D00D36E68 /* GLKit.framework */,
+				DCDE1C08186C9F4D00D36E68 /* OpenGLES.framework */,
+				DCE501D91869531500A3BABB /* GLUT.framework */,
 				DCEBEB3F18689B5E001603EF /* OpenGL.framework */,
 				DCEBEAA518688499001603EF /* QuartzCore.framework */,
 				DCA12A5C18548E52006D6455 /* QuartzCore.framework */,
@@ -168,6 +194,8 @@
 				DCA12A1F18539E14006D6455 /* Foundation.framework */,
 				DCA12A2118539E14006D6455 /* CoreGraphics.framework */,
 				DCA12A2318539E14006D6455 /* UIKit.framework */,
+				DC14A2BD186C3A230086F06C /* GLKit.framework */,
+				DC14A2BF186C3A230086F06C /* OpenGLES.framework */,
 				DCA129E318539CCC006D6455 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -186,6 +214,10 @@
 		DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
 			isa = PBXGroup;
 			children = (
+				DCE2F46C186E41CC009A0715 /* vertex.vsh */,
+				DCE2F46D186E41CC009A0715 /* fragment1.fsh */,
+				DCC0093D186E42CE00D7E486 /* fragment2.fsh */,
+				DCE2F46B186E41CC009A0715 /* fragment3.fsh */,
 				DCA129F318539CCC006D6455 /* NSUIRapidViewAppDelegate.h */,
 				DCA129F418539CCC006D6455 /* NSUIRapidViewAppDelegate.m */,
 				DCA129F618539CCC006D6455 /* MainMenu.xib */,
@@ -233,6 +265,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DCDE1C06186C9C8D00D36E68 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
+				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
+				DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */,
+				DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */,
+			);
+			name = UIView;
+			sourceTree = "<group>";
+		};
 		DCEBEA781868825D001603EF /* Common tests  */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,10 +308,7 @@
 		DCEBEA7B18688290001603EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				DCA12A1718539DD8006D6455 /* UIView+DynamicDraw.h */,
-				DCA12A1818539DD8006D6455 /* UIView+DynamicDraw.m */,
-				DCA12A5E1854965E006D6455 /* UIView+TouchesEvents.h */,
-				DCA12A5F1854965E006D6455 /* UIView+TouchesEvents.m */,
+				DCDE1C06186C9C8D00D36E68 /* UIView */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -344,6 +384,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC848FBA186E614B00E514DC /* fragment2.fsh in Resources */,
+				DC848FBB186E614B00E514DC /* fragment3.fsh in Resources */,
+				DCC00940186E42ED00D7E486 /* vertex.vsh in Resources */,
+				DCC0093F186E42E500D7E486 /* fragment1.fsh in Resources */,
 				DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */,
 				DCA129FA18539CCC006D6455 /* Images.xcassets in Resources */,
 				DCA129F218539CCC006D6455 /* Credits.rtf in Resources */,
@@ -372,11 +416,15 @@
 				DCA12A571853A68E006D6455 /* CommonDrawCode.m in Sources */,
 				DCA12A1918539DEE006D6455 /* NSView+DynamicDraw.m in Sources */,
 				DCA129EE18539CCC006D6455 /* main.m in Sources */,
+				DCC0093E186E42CE00D7E486 /* fragment2.fsh in Sources */,
+				DCE2F470186E41CC009A0715 /* fragment1.fsh in Sources */,
 				DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
+				DCE2F46F186E41CC009A0715 /* vertex.vsh in Sources */,
 				DCA12A5B1854881A006D6455 /* NSView+MouseEvents.m in Sources */,
 				DCEBEB3E186897B6001603EF /* NSOpenGLView+DynamicDraw.m in Sources */,
 				DCEA20741857A5B30002ADB4 /* Life.m in Sources */,
 				DC43FB551868BA0200F332BA /* NSOpenGLView+MouseEvents.m in Sources */,
+				DCE2F46E186E41CC009A0715 /* fragment3.fsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

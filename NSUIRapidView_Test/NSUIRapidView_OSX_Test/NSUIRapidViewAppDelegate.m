@@ -14,20 +14,113 @@
 #import "Life.h"
 
 
+@interface NSUIRapidViewAppDelegate () {
+
+}
+@property (nonatomic, assign)   GLint       modulation;
+@property (nonatomic, assign)   GLint       time;
+@property (nonatomic, assign)   GLint       resolution;
+@property (nonatomic, assign)   GLint       mouse;
+@property (nonatomic)           GLfloat     modulationValue;
+@property (nonatomic)           GLfloat     timeValue;
+@property (nonatomic)           GLfloat*    resolutionValue;
+@property (nonatomic)           GLfloat*    mouseValue;
+@end
+
 @implementation NSUIRapidViewAppDelegate
 
 - (void) mouseDown:(NSView*)view event:(NSEvent*)event {
-    NSLog(@"%@ %@", view, event);
+    NSPoint p = [event locationInWindow];
+    if(NSPointInRect(p, view.frame)) {
+        _mouseValue[0] = p.x/NSWidth(view.frame);
+        _mouseValue[1] = p.y/NSHeight(view.frame);
+        glUniform2fv(_mouse, 1, _mouseValue);
+        [view setNeedsDisplay:YES];
+    }
 }
-- (void) mouseUp:(NSView*)view event:(NSEvent*)event {
-     NSLog(@"%@ %@", view, event);
+
+- (void) mouseUp:(NSView*)view event:(NSEvent*)event { }
+
+- (void) mouseDragged:(NSOpenGLView*)view event:(NSEvent*)event {
+    NSPoint p = [event locationInWindow];
+//    if(NSPointInRect(p, view.frame))
+    {
+        _mouseValue[0] = p.x/NSWidth(view.frame);
+        _mouseValue[1] = p.y/NSHeight(view.frame);
+        glUniform2fv(_mouse, 1, _mouseValue);
+        [view setNeedsDisplay:YES];
+    }
 }
-- (void) mouseDragged:(NSView*)view event:(NSEvent*)event {
-     view.layer.transform = CATransform3DMakeRotation(1, event.deltaX, event.deltaY, event.deltaZ);
+
+- (void) GLSet:(NSOpenGLView*)glView {
+//    glViewport( 0, 0, NSWidth(glView.frame), NSHeight(glView.frame) );
+//    glOrtho(-1, 1, -1, 1, -1, 1);
+//    glClearColor(0, 0, 0, 1);
+    GLuint program;
+    program = glCreateProgram();
+    NSString* vertexShaderPathname = [[NSBundle mainBundle] pathForResource:@"vertex" ofType:@"vsh"];
+    GLchar* vertex_shader_code = (GLchar *)[[NSString stringWithContentsOfFile:vertexShaderPathname
+                                                                      encoding:NSUTF8StringEncoding
+                                                                         error:nil] UTF8String];
+    
+    GLuint vs = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vs, 1, (const GLchar **) &vertex_shader_code, NULL);
+    glCompileShader(vs);
+    glAttachShader(program, vs);
+    
+    NSString* fragmentShaderPathname = [[NSBundle mainBundle] pathForResource:@"fragment3" ofType:@"fsh"];
+    GLchar* fragment_shader_code = (GLchar *)[[NSString stringWithContentsOfFile:fragmentShaderPathname
+                                                                        encoding:NSUTF8StringEncoding
+                                                                           error:nil] UTF8String];
+    
+    GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fs, 1, (const GLchar **) &fragment_shader_code, NULL);
+    glCompileShader(fs);
+    glAttachShader(program, fs);
+    
+    glLinkProgram(program);
+    glUseProgram(program);
+    
+    _modulation = glGetUniformLocation(program, "modulation");
+    _modulationValue = 0.0f;
+    glUniform1f(_modulation, _modulationValue);
+    
+    _time = glGetUniformLocation(program, "time");
+    _timeValue = 0.0f;
+    glUniform1f(_time, _timeValue);
+    
+    _resolution = glGetUniformLocation(program, "resolution");
+    _resolutionValue[0]= NSWidth(glView.frame);
+    _resolutionValue[1]= NSHeight(glView.frame)-100;
+    glUniform2fv(_resolution, 1, _resolutionValue);
+    
+    _mouse = glGetUniformLocation(program, "mouse");
+    _mouseValue[0] = 1.0f;
+    _mouseValue[1] = 1.0f;
+    glUniform2fv(_mouse, 1, _mouseValue);
+}
+
+- (void) glDraw:(NSOpenGLView*)view {
+    glClear( GL_COLOR_BUFFER_BIT );
+    glBegin(GL_QUADS);
+    glVertex3f(-1, -1, 0);
+    glVertex3f(-1, 1, 0);
+    glVertex3f(1, 1, 0);
+    glVertex3f(1, -1, 0);
+    glEnd();
+    _timeValue += 0.05f;
+    glUniform1f(_time, _timeValue);
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    _modulationValue = 0.0;
+    _timeValue = 0.0;
+    _resolutionValue = (GLfloat*)malloc(2*sizeof(GLfloat));
+    memset(_resolutionValue, 0, 2*sizeof(GLfloat));
+    _mouseValue = (GLfloat*)malloc(2*sizeof(GLfloat));
+    memset(_mouseValue, 0, 2*sizeof(GLfloat));
     
     _window.backgroundColor = [NSColor blackColor];
     NSView* mainView = _window.contentView;
@@ -62,99 +155,59 @@
                 }
             }];
             
-            [NSTimer scheduledTimerWithTimeInterval:1/2 target:self selector:@selector(drawLife:) userInfo:view repeats:YES];
+            [NSTimer scheduledTimerWithTimeInterval:1/2 target:self selector:@selector(nsAnimate:) userInfo:view repeats:YES];
             
-        } else if(testChoice == 1) {
-            NSView* view_1 = [NSView withBlock:[CommonCode drawingBlock]
-                                         frame:mainView.frame
-                                     superDraw:YES];
-            view_1.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-            [mainView addSubview:view_1];
-            NSView* view_2 = [NSView withMethod:@selector(drawingMethod:context:)
-                                         target:[CommonCode class]
-                                          frame:mainView.frame
-                                      superDraw:YES];
-            view_2.autoresizingMask = NSViewWidthSizable | NSViewHeightSizable;
-            view_2.wantsLayer = YES;
-            [mainView addSubview:view_2];
-            [view_2 mouseDownWithMethod:@selector(mouseDown:event:) target:self];
-            [view_2 mouseUpWithMethod:@selector(mouseUp:event:) target:self];
-            [view_2 mouseDraggedWithMethod:@selector(mouseDragged:event:) target:self];
         } else {
-            NSOpenGLView* glView = [NSOpenGLView withBlock:^(NSOpenGLView *nsuiView) {
-            glClear( GL_COLOR_BUFFER_BIT );
-            glColor3f(1.0, 1.0, 1.0);
-                
-                glBegin(GL_TRIANGLES);
-                
-                // Front
-                glColor3f(1.0f, 0.0f, 0.0f);     // Red
-                glVertex3f( 0.0f, 1.0f, 0.0f);
-                glColor3f(0.0f, 1.0f, 0.0f);     // Green
-                glVertex3f(-1.0f, -1.0f, 1.0f);
-                glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-                glVertex3f(1.0f, -1.0f, 1.0f);
-                
-                // Right
-                glColor3f(1.0f, 0.0f, 0.0f);     // Red
-                glVertex3f(0.0f, 1.0f, 0.0f);
-                glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-                glVertex3f(1.0f, -1.0f, 1.0f);
-                glColor3f(0.0f, 1.0f, 0.0f);     // Green
-                glVertex3f(1.0f, -1.0f, -1.0f);
-                
-                // Back
-                glColor3f(1.0f, 0.0f, 0.0f);     // Red
-                glVertex3f(0.0f, 1.0f, 0.0f);
-                glColor3f(0.0f, 1.0f, 0.0f);     // Green
-                glVertex3f(1.0f, -1.0f, -1.0f);
-                glColor3f(0.0f, 0.0f, 1.0f);     // Blue
-                glVertex3f(-1.0f, -1.0f, -1.0f);
-                
-                // Left
-                glColor3f(1.0f,0.0f,0.0f);       // Red
-                glVertex3f( 0.0f, 1.0f, 0.0f);
-                glColor3f(0.0f,0.0f,1.0f);       // Blue
-                glVertex3f(-1.0f,-1.0f,-1.0f);
-                glColor3f(0.0f,1.0f,0.0f);       // Green
-                glVertex3f(-1.0f,-1.0f, 1.0f);
-                
-                glEnd();
-                
-            } frame:mainView.frame superDraw:NO];
+            //OpenGL Rapid view
+            //Block
+//            NSOpenGLView* glView = [NSOpenGLView withBlock:^(NSOpenGLView *nsuiView) {
+//                glClear( GL_COLOR_BUFFER_BIT );
+//                glBegin(GL_QUADS);
+//                glVertex3f(-1, -1, 0);
+//                glVertex3f(-1, 1, 0);
+//                glVertex3f(1, 1, 0);
+//                glVertex3f(1, -1, 0);
+//                glEnd();
+//                
+//                _timeValue += 0.05f;
+//                glUniform1f(_time, _timeValue);
+//            } frame:mainView.frame superDraw:NO];
+//            [glView mouseDraggedWithBlock:^(NSOpenGLView* view, NSEvent *event) {
+//                _mouseValue[0] = [event locationInWindow].x/NSWidth(glView.frame);
+//                _mouseValue[1] = [event locationInWindow].y/NSHeight(glView.frame);
+//                glUniform2fv(_mouse, 1, _mouseValue);
+//                [view setNeedsDisplay:YES];
+//            }];            
             
-            [glView NSUIViewGLSet:^{
-                glViewport( 0, 0, NSWidth(glView.frame), NSHeight(glView.frame) );
-                glOrtho(-2, 2, -2, 2, -2, 2);
-            }];
+            //Method
+            NSOpenGLView* glView = [NSOpenGLView withMethod:@selector(glDraw:)
+                                                     target:self
+                                                      frame:mainView.frame
+                                                  superDraw:NO];
+            [glView glSetWithMethod:@selector(GLSet:) target:self];
+            [glView mouseDownWithMethod:@selector(mouseDown:event:) target:self];
+            [glView mouseDraggedWithMethod:@selector(mouseDragged:event:) target:self];
             [mainView addSubview:glView];
-            
-            [glView mouseDraggedWithBlock:^(NSOpenGLView* view, NSEvent *event) {
-                glRotatef(1, event.deltaX, event.deltaY, event.deltaZ);
-                [view setNeedsDisplay:YES];
-            }];
-            
-            [NSTimer scheduledTimerWithTimeInterval:1.0/25.0 target:self selector:@selector(glRotate:) userInfo:glView repeats:YES];
+            float frameRate = 1.0f/30.0f;
+            [NSTimer scheduledTimerWithTimeInterval:frameRate
+                                             target:self
+                                           selector:@selector(glAnimate:)
+                                           userInfo:glView
+                                            repeats:YES];
         }
     };
     
-    //NSView 0 = Conway's game of life
-    //NSOpenGLView 1 = OpenGL
-    test(2);
+    //NSView 0
+    //NSOpenGLView 1
+    test(1);
 }
 
-- (void) glRotate:(NSTimer*)timer {
-    GLfloat f = 1.0/(GLfloat)RAND_MAX;
-    GLfloat(^Random)() = ^GLfloat() {
-        return rand() * f;
-    };
-    glRotatef(1, Random(), Random(), 0);
+- (void) glAnimate:(NSTimer*)timer {
     [timer.userInfo setNeedsDisplay:YES];
 }
 
-- (void) drawLife:(NSTimer*)timer {
-    NSView* view = [timer userInfo];
-    [view setNeedsDisplay:YES];
+- (void) nsAnimate:(NSTimer*)timer {
+    [timer.userInfo setNeedsDisplay:YES];
 }
 
 @end

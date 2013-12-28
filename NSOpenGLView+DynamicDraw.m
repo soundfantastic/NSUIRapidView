@@ -80,10 +80,18 @@ NS_INLINE Class view_newClass() {
     return [[Subview alloc] initWithFrame:frame pixelFormat:[NSOpenGLView glDefaultPixelFormat]];
 }
 
-- (void) NSUIViewGLSet:(void(^)(void))block {
+- (void) glSetWithBlock:(void(^)(void))block {
     if(block) {
         [[self openGLContext] makeCurrentContext];
         block();
+    }
+}
+
+- (void) glSetWithMethod:(SEL)selector
+                  target:(id)target {
+    if(class_respondsToSelector(object_getClass(target), selector)) {
+        [[self openGLContext] makeCurrentContext];
+        objc_msgSend(target, selector, self);
     }
 }
 
