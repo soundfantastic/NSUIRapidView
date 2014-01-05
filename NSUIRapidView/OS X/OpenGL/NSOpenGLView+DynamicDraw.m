@@ -8,6 +8,9 @@
 
 #import "NSOpenGLView+DynamicDraw.h"
 #import <objc/objc-runtime.h>
+#import <OpenGL/OpenGL.h>
+#import <OpenGL/gl.h>
+#import <OpenGL/glu.h>
 
 @implementation NSOpenGLView (dynamicDraw)
 

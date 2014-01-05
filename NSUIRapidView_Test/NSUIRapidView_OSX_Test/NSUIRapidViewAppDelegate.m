@@ -13,15 +13,11 @@
 #import "CommonDrawCode.h"
 #import "Life.h"
 
-
 @interface NSUIRapidViewAppDelegate () {
-
 }
-@property (nonatomic, assign)   GLint       modulation;
 @property (nonatomic, assign)   GLint       time;
 @property (nonatomic, assign)   GLint       resolution;
 @property (nonatomic, assign)   GLint       mouse;
-@property (nonatomic)           GLfloat     modulationValue;
 @property (nonatomic)           GLfloat     timeValue;
 @property (nonatomic)           GLfloat*    resolutionValue;
 @property (nonatomic)           GLfloat*    mouseValue;
@@ -53,9 +49,9 @@
 }
 
 - (void) GLSet:(NSOpenGLView*)glView {
-//    glViewport( 0, 0, NSWidth(glView.frame), NSHeight(glView.frame) );
-//    glOrtho(-1, 1, -1, 1, -1, 1);
-//    glClearColor(0, 0, 0, 1);
+    glViewport( 0, 0, NSWidth(glView.frame), NSHeight(glView.frame) );
+    glOrtho(-1, 1, -0.75, 0.75, -1, 1);
+    glClearColor(0, 0, 0, 1);
     GLuint program;
     program = glCreateProgram();
     NSString* vertexShaderPathname = [[NSBundle mainBundle] pathForResource:@"vertex" ofType:@"vsh"];
@@ -68,7 +64,7 @@
     glCompileShader(vs);
     glAttachShader(program, vs);
     
-    NSString* fragmentShaderPathname = [[NSBundle mainBundle] pathForResource:@"fragment3" ofType:@"fsh"];
+    NSString* fragmentShaderPathname = [[NSBundle mainBundle] pathForResource:@"fragment2" ofType:@"fsh"];
     GLchar* fragment_shader_code = (GLchar *)[[NSString stringWithContentsOfFile:fragmentShaderPathname
                                                                         encoding:NSUTF8StringEncoding
                                                                            error:nil] UTF8String];
@@ -81,12 +77,8 @@
     glLinkProgram(program);
     glUseProgram(program);
     
-    _modulation = glGetUniformLocation(program, "modulation");
-    _modulationValue = 0.0f;
-    glUniform1f(_modulation, _modulationValue);
-    
     _time = glGetUniformLocation(program, "time");
-    _timeValue = 0.0f;
+    _timeValue = 10.0f;
     glUniform1f(_time, _timeValue);
     
     _resolution = glGetUniformLocation(program, "resolution");
@@ -102,12 +94,14 @@
 
 - (void) glDraw:(NSOpenGLView*)view {
     glClear( GL_COLOR_BUFFER_BIT );
+    
     glBegin(GL_QUADS);
     glVertex3f(-1, -1, 0);
     glVertex3f(-1, 1, 0);
     glVertex3f(1, 1, 0);
     glVertex3f(1, -1, 0);
     glEnd();
+
     _timeValue += 0.05f;
     glUniform1f(_time, _timeValue);
 }
@@ -115,8 +109,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     
-    _modulationValue = 0.0;
-    _timeValue = 0.0;
     _resolutionValue = (GLfloat*)malloc(2*sizeof(GLfloat));
     memset(_resolutionValue, 0, 2*sizeof(GLfloat));
     _mouseValue = (GLfloat*)malloc(2*sizeof(GLfloat));
