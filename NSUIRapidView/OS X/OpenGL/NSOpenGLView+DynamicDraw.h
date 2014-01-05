@@ -22,6 +22,8 @@
 - (void) glSetWithBlock:(void(^)(void))block;
 - (void) glSetWithMethod:(SEL)method
                   target:(id)target;
+- (GLuint) glVertex:(NSString*)vertex
+           fragment:(NSString*)fragment;
 - (void) dispose;
 
 @end

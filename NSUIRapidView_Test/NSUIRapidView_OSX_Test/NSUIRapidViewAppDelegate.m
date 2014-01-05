@@ -50,32 +50,17 @@
 
 - (void) GLSet:(NSOpenGLView*)glView {
     glViewport( 0, 0, NSWidth(glView.frame), NSHeight(glView.frame) );
-    glOrtho(-1, 1, -0.75, 0.75, -1, 1);
+    glOrtho(-1, 1, -1, 1, -1, 1);
     glClearColor(0, 0, 0, 1);
-    GLuint program;
-    program = glCreateProgram();
+    
     NSString* vertexShaderPathname = [[NSBundle mainBundle] pathForResource:@"vertex" ofType:@"vsh"];
-    GLchar* vertex_shader_code = (GLchar *)[[NSString stringWithContentsOfFile:vertexShaderPathname
-                                                                      encoding:NSUTF8StringEncoding
-                                                                         error:nil] UTF8String];
-    
-    GLuint vs = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vs, 1, (const GLchar **) &vertex_shader_code, NULL);
-    glCompileShader(vs);
-    glAttachShader(program, vs);
-    
-    NSString* fragmentShaderPathname = [[NSBundle mainBundle] pathForResource:@"fragment2" ofType:@"fsh"];
-    GLchar* fragment_shader_code = (GLchar *)[[NSString stringWithContentsOfFile:fragmentShaderPathname
-                                                                        encoding:NSUTF8StringEncoding
-                                                                           error:nil] UTF8String];
-    
-    GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fs, 1, (const GLchar **) &fragment_shader_code, NULL);
-    glCompileShader(fs);
-    glAttachShader(program, fs);
-    
-    glLinkProgram(program);
-    glUseProgram(program);
+    NSString* fragmentShaderPathname = [[NSBundle mainBundle] pathForResource:@"fragment3" ofType:@"fsh"];
+    GLuint program = [glView glVertex:[NSString stringWithContentsOfFile:vertexShaderPathname
+                                                                encoding:NSUTF8StringEncoding
+                                                                   error:nil]
+                             fragment:[NSString stringWithContentsOfFile:fragmentShaderPathname
+                                                                encoding:NSUTF8StringEncoding
+                                                                   error:nil]];
     
     _time = glGetUniformLocation(program, "time");
     _timeValue = 10.0f;

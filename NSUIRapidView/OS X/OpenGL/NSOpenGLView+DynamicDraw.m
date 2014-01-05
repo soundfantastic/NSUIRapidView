@@ -98,6 +98,25 @@ NS_INLINE Class view_newClass() {
     }
 }
 
+- (GLuint) glVertex:(NSString*)vertex fragment:(NSString*)fragment {
+    [[self openGLContext] makeCurrentContext];
+    GLuint program;
+    program = glCreateProgram();
+    GLchar* vertex_shader_code = (GLchar *)[vertex UTF8String];
+    GLuint vs = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vs, 1, (const GLchar**) &vertex_shader_code, NULL);
+    glCompileShader(vs);
+    glAttachShader(program, vs);
+    GLchar* fragment_shader_code = (GLchar *)[fragment UTF8String];
+    GLuint fs = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fs, 1, (const GLchar**) &fragment_shader_code, NULL);
+    glCompileShader(fs);
+    glAttachShader(program, fs);
+    glLinkProgram(program);
+    glUseProgram(program);
+    return program;
+}
+
 - (void) dispose {
     if([self class]) {
         objc_disposeClassPair([self class]);
