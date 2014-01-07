@@ -7,8 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC848FBA186E614B00E514DC /* fragment2.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCC0093D186E42CE00D7E486 /* fragment2.fsh */; };
-		DC848FBB186E614B00E514DC /* fragment3.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46B186E41CC009A0715 /* fragment3.fsh */; };
+		DC47BF73187B44C200033B55 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
+		DC47BF79187B44C200033B55 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC47BF77187B44C200033B55 /* InfoPlist.strings */; };
+		DC47BF7B187B44C200033B55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47BF7A187B44C200033B55 /* main.m */; };
+		DC47BF7F187B44C200033B55 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DC47BF7D187B44C200033B55 /* Credits.rtf */; };
+		DC47BF82187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC47BF81187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.m */; };
+		DC47BF85187B44C200033B55 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC47BF83187B44C200033B55 /* MainMenu.xib */; };
+		DC47BF87187B44C200033B55 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC47BF86187B44C200033B55 /* Images.xcassets */; };
+		DC47BFA3187B4BB600033B55 /* NSOpenGLView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DEC1879B4F7002C8088 /* NSOpenGLView+MouseEvents.m */; };
+		DC47BFA4187B4BBB00033B55 /* NSOpenGLView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DEA1879B4F7002C8088 /* NSOpenGLView+DynamicDraw.m */; };
+		DC47BFA5187B4C0E00033B55 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBEB3F18689B5E001603EF /* OpenGL.framework */; };
+		DC47BFAE187B4DC500033B55 /* fragment1.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DC47BFAA187B4DC500033B55 /* fragment1.fsh */; };
+		DC47BFAF187B4DC500033B55 /* fragment2.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DC47BFAB187B4DC500033B55 /* fragment2.fsh */; };
+		DC47BFB0187B4DC500033B55 /* fragment3.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DC47BFAC187B4DC500033B55 /* fragment3.fsh */; };
+		DC47BFB1187B4DC500033B55 /* vertex.vsh in Sources */ = {isa = PBXBuildFile; fileRef = DC47BFAD187B4DC500033B55 /* vertex.vsh */; };
+		DC47BFB2187B4E5100033B55 /* fragment1.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DC47BFAA187B4DC500033B55 /* fragment1.fsh */; };
+		DC47BFB3187B4E5100033B55 /* fragment2.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DC47BFAB187B4DC500033B55 /* fragment2.fsh */; };
+		DC47BFB4187B4E5100033B55 /* fragment3.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DC47BFAC187B4DC500033B55 /* fragment3.fsh */; };
+		DC47BFB5187B4E5100033B55 /* vertex.vsh in Resources */ = {isa = PBXBuildFile; fileRef = DC47BFAD187B4DC500033B55 /* vertex.vsh */; };
 		DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA129E118539CCC006D6455 /* Cocoa.framework */; };
 		DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DCA129EA18539CCC006D6455 /* InfoPlist.strings */; };
 		DCA129EE18539CCC006D6455 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA129ED18539CCC006D6455 /* main.m */; };
@@ -29,30 +45,34 @@
 		DCA12A571853A68E006D6455 /* CommonDrawCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A561853A68E006D6455 /* CommonDrawCode.m */; };
 		DCA12A581853A68E006D6455 /* CommonDrawCode.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA12A561853A68E006D6455 /* CommonDrawCode.m */; };
 		DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA12A5C18548E52006D6455 /* QuartzCore.framework */; };
-		DCC0093E186E42CE00D7E486 /* fragment2.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCC0093D186E42CE00D7E486 /* fragment2.fsh */; };
-		DCC0093F186E42E500D7E486 /* fragment1.fsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46D186E41CC009A0715 /* fragment1.fsh */; };
-		DCC00940186E42ED00D7E486 /* vertex.vsh in Resources */ = {isa = PBXBuildFile; fileRef = DCE2F46C186E41CC009A0715 /* vertex.vsh */; };
 		DCDE1C09186C9F4D00D36E68 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDE1C07186C9F4D00D36E68 /* GLKit.framework */; };
 		DCDE1C0A186C9F4D00D36E68 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDE1C08186C9F4D00D36E68 /* OpenGLES.framework */; };
 		DCDF2DED1879B4F7002C8088 /* NSView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DE41879B4F7002C8088 /* NSView+DynamicDraw.m */; };
 		DCDF2DEE1879B4F7002C8088 /* NSView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DE61879B4F7002C8088 /* NSView+MouseEvents.m */; };
-		DCDF2DEF1879B4F7002C8088 /* NSOpenGLView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DEA1879B4F7002C8088 /* NSOpenGLView+DynamicDraw.m */; };
-		DCDF2DF01879B4F7002C8088 /* NSOpenGLView+MouseEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DEC1879B4F7002C8088 /* NSOpenGLView+MouseEvents.m */; };
 		DCDF2DF71879B56C002C8088 /* UIView+DynamicDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DF41879B56C002C8088 /* UIView+DynamicDraw.m */; };
 		DCDF2DF81879B56C002C8088 /* UIView+TouchesEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DF61879B56C002C8088 /* UIView+TouchesEvents.m */; };
 		DCDF2DFC1879B726002C8088 /* XRapidView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDF2DFB1879B726002C8088 /* XRapidView.m */; };
-		DCE2F46E186E41CC009A0715 /* fragment3.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46B186E41CC009A0715 /* fragment3.fsh */; };
-		DCE2F46F186E41CC009A0715 /* vertex.vsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46C186E41CC009A0715 /* vertex.vsh */; };
-		DCE2F470186E41CC009A0715 /* fragment1.fsh in Sources */ = {isa = PBXBuildFile; fileRef = DCE2F46D186E41CC009A0715 /* fragment1.fsh */; };
-		DCE501DA1869531500A3BABB /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCE501D91869531500A3BABB /* GLUT.framework */; };
 		DCEA20741857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
 		DCEA20751857A5B30002ADB4 /* Life.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEA20731857A5B30002ADB4 /* Life.m */; };
-		DCEBEB4018689B5F001603EF /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCEBEB3F18689B5E001603EF /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC14A2BD186C3A230086F06C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		DC14A2BF186C3A230086F06C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		DC47BF72187B44C200033B55 /* GLRapidView_OSX_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLRapidView_OSX_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC47BF76187B44C200033B55 /* GLRapidView_OSX_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GLRapidView_OSX_Test-Info.plist"; sourceTree = "<group>"; };
+		DC47BF78187B44C200033B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DC47BF7A187B44C200033B55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC47BF7C187B44C200033B55 /* GLRapidView_OSX_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLRapidView_OSX_Test-Prefix.pch"; sourceTree = "<group>"; };
+		DC47BF7E187B44C200033B55 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DC47BF80187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLRapidView_OSX_TestAppDelegate.h; sourceTree = "<group>"; };
+		DC47BF81187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLRapidView_OSX_TestAppDelegate.m; sourceTree = "<group>"; };
+		DC47BF84187B44C200033B55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DC47BF86187B44C200033B55 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DC47BFAA187B4DC500033B55 /* fragment1.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment1.fsh; sourceTree = "<group>"; };
+		DC47BFAB187B4DC500033B55 /* fragment2.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment2.fsh; sourceTree = "<group>"; };
+		DC47BFAC187B4DC500033B55 /* fragment3.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment3.fsh; sourceTree = "<group>"; };
+		DC47BFAD187B4DC500033B55 /* vertex.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertex.vsh; sourceTree = "<group>"; };
 		DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSUIRapidView_OSX_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA129E118539CCC006D6455 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DCA129E418539CCC006D6455 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -86,7 +106,6 @@
 		DCA12A551853A68E006D6455 /* CommonDrawCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonDrawCode.h; path = "Common test/CommonDrawCode.h"; sourceTree = "<group>"; };
 		DCA12A561853A68E006D6455 /* CommonDrawCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonDrawCode.m; path = "Common test/CommonDrawCode.m"; sourceTree = "<group>"; };
 		DCA12A5C18548E52006D6455 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DCC0093D186E42CE00D7E486 /* fragment2.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment2.fsh; sourceTree = "<group>"; };
 		DCDE1C07186C9F4D00D36E68 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
 		DCDE1C08186C9F4D00D36E68 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		DCDF2DE31879B4F7002C8088 /* NSView+DynamicDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+DynamicDraw.h"; sourceTree = "<group>"; };
@@ -103,9 +122,6 @@
 		DCDF2DF61879B56C002C8088 /* UIView+TouchesEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TouchesEvents.m"; sourceTree = "<group>"; };
 		DCDF2DFA1879B726002C8088 /* XRapidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRapidView.h; sourceTree = "<group>"; };
 		DCDF2DFB1879B726002C8088 /* XRapidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRapidView.m; sourceTree = "<group>"; };
-		DCE2F46B186E41CC009A0715 /* fragment3.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment3.fsh; sourceTree = "<group>"; };
-		DCE2F46C186E41CC009A0715 /* vertex.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = vertex.vsh; sourceTree = "<group>"; };
-		DCE2F46D186E41CC009A0715 /* fragment1.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = fragment1.fsh; sourceTree = "<group>"; };
 		DCE501D91869531500A3BABB /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		DCEA20721857A5B30002ADB4 /* Life.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Life.h; path = "Common test/Life.h"; sourceTree = "<group>"; };
 		DCEA20731857A5B30002ADB4 /* Life.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Life.m; path = "Common test/Life.m"; sourceTree = "<group>"; };
@@ -114,12 +130,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DC47BF6F187B44C200033B55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC47BFA5187B4C0E00033B55 /* OpenGL.framework in Frameworks */,
+				DC47BF73187B44C200033B55 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCA129DB18539CCC006D6455 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE501DA1869531500A3BABB /* GLUT.framework in Frameworks */,
-				DCEBEB4018689B5F001603EF /* OpenGL.framework in Frameworks */,
 				DCA12A5D18548E52006D6455 /* QuartzCore.framework in Frameworks */,
 				DCA129E218539CCC006D6455 /* Cocoa.framework in Frameworks */,
 			);
@@ -140,6 +163,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC47BF74187B44C200033B55 /* GLRapidView_OSX_Test */ = {
+			isa = PBXGroup;
+			children = (
+				DC47BFAA187B4DC500033B55 /* fragment1.fsh */,
+				DC47BFAB187B4DC500033B55 /* fragment2.fsh */,
+				DC47BFAC187B4DC500033B55 /* fragment3.fsh */,
+				DC47BFAD187B4DC500033B55 /* vertex.vsh */,
+				DC47BF80187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.h */,
+				DC47BF81187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.m */,
+				DC47BF83187B44C200033B55 /* MainMenu.xib */,
+				DC47BF86187B44C200033B55 /* Images.xcassets */,
+				DC47BF75187B44C200033B55 /* Supporting Files */,
+			);
+			path = GLRapidView_OSX_Test;
+			sourceTree = "<group>";
+		};
+		DC47BF75187B44C200033B55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC47BF76187B44C200033B55 /* GLRapidView_OSX_Test-Info.plist */,
+				DC47BF77187B44C200033B55 /* InfoPlist.strings */,
+				DC47BF7A187B44C200033B55 /* main.m */,
+				DC47BF7C187B44C200033B55 /* GLRapidView_OSX_Test-Prefix.pch */,
+				DC47BF7D187B44C200033B55 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DCA129D518539CCB006D6455 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +198,7 @@
 				DCEBEA781868825D001603EF /* Common tests  */,
 				DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */,
 				DCA12A2518539E14006D6455 /* NSUIRapidView_IOS_Test */,
+				DC47BF74187B44C200033B55 /* GLRapidView_OSX_Test */,
 				DCA129E018539CCC006D6455 /* Frameworks */,
 				DCA129DF18539CCC006D6455 /* Products */,
 			);
@@ -157,6 +209,7 @@
 			children = (
 				DCA129DE18539CCC006D6455 /* NSUIRapidView_OSX_Test.app */,
 				DCA12A1E18539E14006D6455 /* NSUIRapidView_IOS_Test.app */,
+				DC47BF72187B44C200033B55 /* GLRapidView_OSX_Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,10 +248,6 @@
 		DCA129E718539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
 			isa = PBXGroup;
 			children = (
-				DCE2F46C186E41CC009A0715 /* vertex.vsh */,
-				DCE2F46D186E41CC009A0715 /* fragment1.fsh */,
-				DCC0093D186E42CE00D7E486 /* fragment2.fsh */,
-				DCE2F46B186E41CC009A0715 /* fragment3.fsh */,
 				DCA129F318539CCC006D6455 /* NSUIRapidViewAppDelegate.h */,
 				DCA129F418539CCC006D6455 /* NSUIRapidViewAppDelegate.m */,
 				DCA129F618539CCC006D6455 /* MainMenu.xib */,
@@ -323,6 +372,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DC47BF71187B44C200033B55 /* GLRapidView_OSX_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC47BF9D187B44C300033B55 /* Build configuration list for PBXNativeTarget "GLRapidView_OSX_Test" */;
+			buildPhases = (
+				DC47BF6E187B44C200033B55 /* Sources */,
+				DC47BF6F187B44C200033B55 /* Frameworks */,
+				DC47BF70187B44C200033B55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLRapidView_OSX_Test;
+			productName = GLRapidView_OSX_Test;
+			productReference = DC47BF72187B44C200033B55 /* GLRapidView_OSX_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DCA12A0F18539CCC006D6455 /* Build configuration list for PBXNativeTarget "NSUIRapidView_OSX_Test" */;
@@ -381,20 +447,32 @@
 			projectRoot = "";
 			targets = (
 				DCA129DD18539CCC006D6455 /* NSUIRapidView_OSX_Test */,
+				DC47BF71187B44C200033B55 /* GLRapidView_OSX_Test */,
 				DCA12A1D18539E14006D6455 /* NSUIRapidView_IOS_Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DC47BF70187B44C200033B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC47BFB2187B4E5100033B55 /* fragment1.fsh in Resources */,
+				DC47BFB3187B4E5100033B55 /* fragment2.fsh in Resources */,
+				DC47BFB4187B4E5100033B55 /* fragment3.fsh in Resources */,
+				DC47BFB5187B4E5100033B55 /* vertex.vsh in Resources */,
+				DC47BF79187B44C200033B55 /* InfoPlist.strings in Resources */,
+				DC47BF87187B44C200033B55 /* Images.xcassets in Resources */,
+				DC47BF7F187B44C200033B55 /* Credits.rtf in Resources */,
+				DC47BF85187B44C200033B55 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCA129DC18539CCC006D6455 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC848FBA186E614B00E514DC /* fragment2.fsh in Resources */,
-				DC848FBB186E614B00E514DC /* fragment3.fsh in Resources */,
-				DCC00940186E42ED00D7E486 /* vertex.vsh in Resources */,
-				DCC0093F186E42E500D7E486 /* fragment1.fsh in Resources */,
 				DCA129EC18539CCC006D6455 /* InfoPlist.strings in Resources */,
 				DCA129FA18539CCC006D6455 /* Images.xcassets in Resources */,
 				DCA129F218539CCC006D6455 /* Credits.rtf in Resources */,
@@ -416,6 +494,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DC47BF6E187B44C200033B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC47BFAF187B4DC500033B55 /* fragment2.fsh in Sources */,
+				DC47BF82187B44C200033B55 /* GLRapidView_OSX_TestAppDelegate.m in Sources */,
+				DC47BFA4187B4BBB00033B55 /* NSOpenGLView+DynamicDraw.m in Sources */,
+				DC47BFB0187B4DC500033B55 /* fragment3.fsh in Sources */,
+				DC47BFAE187B4DC500033B55 /* fragment1.fsh in Sources */,
+				DC47BF7B187B44C200033B55 /* main.m in Sources */,
+				DC47BFA3187B4BB600033B55 /* NSOpenGLView+MouseEvents.m in Sources */,
+				DC47BFB1187B4DC500033B55 /* vertex.vsh in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DCA129DA18539CCC006D6455 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,16 +516,10 @@
 				DCDF2DFC1879B726002C8088 /* XRapidView.m in Sources */,
 				DCA12A571853A68E006D6455 /* CommonDrawCode.m in Sources */,
 				DCA129EE18539CCC006D6455 /* main.m in Sources */,
-				DCC0093E186E42CE00D7E486 /* fragment2.fsh in Sources */,
 				DCDF2DED1879B4F7002C8088 /* NSView+DynamicDraw.m in Sources */,
 				DCDF2DEE1879B4F7002C8088 /* NSView+MouseEvents.m in Sources */,
-				DCE2F470186E41CC009A0715 /* fragment1.fsh in Sources */,
 				DCA129F518539CCC006D6455 /* NSUIRapidViewAppDelegate.m in Sources */,
-				DCDF2DF01879B4F7002C8088 /* NSOpenGLView+MouseEvents.m in Sources */,
-				DCE2F46F186E41CC009A0715 /* vertex.vsh in Sources */,
 				DCEA20741857A5B30002ADB4 /* Life.m in Sources */,
-				DCDF2DEF1879B4F7002C8088 /* NSOpenGLView+DynamicDraw.m in Sources */,
-				DCE2F46E186E41CC009A0715 /* fragment3.fsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +540,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DC47BF77187B44C200033B55 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC47BF78187B44C200033B55 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DC47BF7D187B44C200033B55 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC47BF7E187B44C200033B55 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DC47BF83187B44C200033B55 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC47BF84187B44C200033B55 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		DCA129EA18539CCC006D6455 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -504,6 +615,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DC47BF99187B44C300033B55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLRapidView_OSX_Test/GLRapidView_OSX_Test-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GLRapidView_OSX_Test/GLRapidView_OSX_Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DC47BF9A187B44C300033B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GLRapidView_OSX_Test/GLRapidView_OSX_Test-Prefix.pch";
+				INFOPLIST_FILE = "GLRapidView_OSX_Test/GLRapidView_OSX_Test-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		DCA12A0D18539CCC006D6455 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -656,6 +799,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DC47BF9D187B44C300033B55 /* Build configuration list for PBXNativeTarget "GLRapidView_OSX_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC47BF99187B44C300033B55 /* Debug */,
+				DC47BF9A187B44C300033B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DCA129D918539CCB006D6455 /* Build configuration list for PBXProject "NSUIRapidView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
